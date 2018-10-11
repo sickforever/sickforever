@@ -1,32 +1,61 @@
-<!-- 
+<head>
+<!--
 
 
 Secret Message Goes here.
 
 
---> 
+-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <style>
 body {
   text-align:center;
   margin:0px;
   padding:0px;
 }
-div {
+div.main {
   height: 30vh;
   width:50vh;
-  display:inline-block;
-  background-image:url("./sickforeverscriptred.png");
+  display: inline-block;
+  /**background-image:url("./sickforeverscriptred.png");**/
   background-size:contain;
   background-position:center;
   background-repeat:no-repeat;
-  margin-top:30vh;
+  margin-top:45vh;
+  text-align: center;
 }
-  
+
+div.main > .internal {
+  display: inline;
+  color:red;
+  font-family: monospace;
+  font-size:22px;
+}
+
+.typed-cursor {
+  color:red;
+  font-size: 22px;
+}
 @media screen and (max-width: 800px){
-  div {
+  div.main {
     height: 20vh;
     margin-top:28vh;
   }
  }
 </style>
-<div></div>
+</head>
+<body>
+<div class="main">
+  <div class="internal"></div>
+</div>
+<script>
+var options = {
+  strings: ["Welcome to Sickforever "],
+  typeSpeed: 40,
+  showCursor: true,
+  cursorChar: '|',
+}
+
+var typed = new Typed(".internal", options);
+</script>
+</body>
