@@ -11,21 +11,21 @@ Secret Message Goes here.
 body {
   text-align:center;
   margin:0px;
-
   padding:0px;
 }
-.main {
-  height: 40vh;
+div.main {
+  height: 30vh;
+  width:50vh;
   display: inline-block;
   /**background-image:url("./sickforeverscriptred.png");**/
   background-size:contain;
   background-position:center;
   background-repeat:no-repeat;
-  margin-top:25vh;
+  margin-top:45vh;
   text-align: center;
 }
 
-.main > .internal {
+div.main > .internal {
   display: inline;
   color:red;
   font-family: monospace;
@@ -37,24 +37,20 @@ body {
   font-size: 22px;
 }
 @media screen and (max-width: 800px){
-  .main {
-    height: 40vh;
+  div.main {
+    height: 20vh;
     margin-top:28vh;
   }
  }
 </style>
 </head>
 <body>
-  <img src="./sickforeverscriptred.png" class="main">
-  <!--
 <div class="main">
   <div class="internal"></div>
 </div>
--->
-<!--
 <script>
 var options = {
-  strings: ["Welcome to sickförever"],
+  strings: ["Welcome to Sickforever."],
   typeSpeed: 40,
   showCursor: true,
   cursorChar: '|',
@@ -62,5 +58,4 @@ var options = {
 
 var typed = new Typed(".internal", options);
 </script>
--->
 </body>
