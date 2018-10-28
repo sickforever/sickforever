@@ -6,6 +6,10 @@ Secret Message Goes here.
 
 
 -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <style>
 body {
@@ -21,7 +25,7 @@ div.main {
   background-size:contain;
   background-position:center;
   background-repeat:no-repeat;
-  margin-top:45vh;
+  margin-top:40vh;
   text-align: center;
 }
 
@@ -30,6 +34,26 @@ div.main > .internal {
   color:red;
   font-family: monospace;
   font-size:22px;
+}
+
+div.main > .internal2 {
+  display: inline;
+  color:red;
+  font-family: monospace;
+  font-size:22px;
+}
+
+div.main > #links {
+  display: block;
+  color:red;
+  font-family: monospace;
+  font-size:22px;
+  display: none;
+  width:100%:
+}
+
+div.main > #links > a{
+  display: inline-block;
 }
 
 .typed-cursor {
@@ -47,6 +71,12 @@ div.main > .internal {
 <body>
 <div class="main">
   <div class="internal"></div>
+  <div class="internal2"></div>
+  <div id="links">
+    <a href="">Shop</a>
+    <a href="">Gallery</a>
+    <a href="">Social</a>
+  </div>
 </div>
 <script>
 var options = {
@@ -57,5 +87,19 @@ var options = {
 }
 
 var typed = new Typed(".internal", options);
+
+var options = {
+  strings: ["How can we help you?"],
+  typeSpeed: 40,
+  showCursor: true,
+  cursorChar: '|',
+}
+
+setTimeout(function(){
+  var typed2 = new Typed(".internal2", options);
+  setTimeout(function(){
+    $("#links").fadeIn();
+  }, 3000);
+}, 4000);
 </script>
 </body>
