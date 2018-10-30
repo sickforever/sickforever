@@ -83,12 +83,21 @@ div.main > #links > a:hover{
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 <script>
-axios.post("https://api.airtable.com/v0/appOKbgViL9TDdwKD/Table%201", {
+axios.post("https://api.airtable.com/v0/appOKbgViL9TDdwKD/Phone%20Numbers?", {
+  "api_key" : "keymZJPVAeiIRxB5n",
   "fields": {
-    "Phone Number": "4074669725",
-    "api_key" : "keymZJPVAeiIRxB5n"
+    "Phone": "4074669725",
   }
+},
+{ headers: { 'Content-Type': 'application/json' } }
+
+).then(response => {
+	console.log(response)
+})
+.catch(error => {
+    console.log(error.response)
 });
+
 </script>
 </head>
 <body>
@@ -120,8 +129,10 @@ var options = {
 }
 
 setTimeout(function(){
+  $(".internal").fadeOut();
   var typed2 = new Typed(".internal2", options);
   setTimeout(function(){
+    $(".internal2").fadeOut();
     $("#links").fadeIn();
   }, 3000);
 }, 4000);
