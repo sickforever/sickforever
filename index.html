@@ -130,11 +130,16 @@ var options = {
 
 setTimeout(function(){
   $(".internal").fadeOut();
-  var typed2 = new Typed(".internal2", options);
   setTimeout(function(){
-    $(".internal2").fadeOut();
-    $("#links").fadeIn();
-  }, 3000);
+    var typed2 = new Typed(".internal2", options);
+    setTimeout(function(){
+      $(".internal2").fadeOut();
+      setTimeout(function(){
+      $("#links").fadeIn();
+      }, 1000);
+    }, 3000);
+  }, 1000);
+
 }, 4000);
 
 $("#shop").click(function(){
