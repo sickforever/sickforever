@@ -106,8 +106,8 @@ axios.post("https://api.airtable.com/v0/appOKbgViL9TDdwKD/Phone%20Numbers?", {
   <div class="internal2"></div>
   <div id="links">
     <a id="shop">Shop</a>
-    <a href="">Gallery</a>
-    <a href="">Social</a>
+    <a href="sickforever333.tumblr.com">Gallery</a>
+    <a href="http://instagram.com/sickforever">Social</a>
   </div>
   <div class="signup">SIGN UP FIELD</div>
 </div>
@@ -130,15 +130,17 @@ var options = {
 
 setTimeout(function(){
   $(".internal").fadeOut();
+  $(".typed-cursor").hide();
   setTimeout(function(){
     var typed2 = new Typed(".internal2", options);
     setTimeout(function(){
       $(".internal2").fadeOut();
       setTimeout(function(){
       $("#links").fadeIn();
-      }, 1000);
+      $(".typed-cursor").fadeIn();
+      }, 800);
     }, 3000);
-  }, 1000);
+  }, 800);
 
 }, 4000);
 
