@@ -62,8 +62,9 @@ div.main > .signup {
 div.main > #links > a{
   display: inline-block;
   cursor: pointer;
-  color: black;
+  color: red;
   text-decoration: none;
+
 }
 
 div.main > #links > a:hover{
@@ -129,8 +130,6 @@ var options = {
 }
 
 setTimeout(function(){
-  $(".internal").fadeOut();
-  $(".typed-cursor").hide();
   setTimeout(function(){
     var typed2 = new Typed(".internal2", options);
     setTimeout(function(){
@@ -140,7 +139,10 @@ setTimeout(function(){
       $(".typed-cursor").fadeIn();
       }, 800);
     }, 3000);
-  }, 800);
+  }, 500);
+  $(".internal").fadeOut();
+  $(".typed-cursor").hide();
+
 
 }, 4000);
 
